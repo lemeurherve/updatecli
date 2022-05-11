@@ -7,8 +7,9 @@ sources:
     spec:
       files:
         - "e2e/updatecli.d/success.d/yaml/scenario1.yaml"
-        - "e2e/updatecli.d/success.d/yaml/scenario2.yaml"
-        - "e2e/updatecli.d/success.d/yaml/scenario3.yaml"
+# Multiple files is not supported for sources
+#        - "e2e/updatecli.d/success.d/yaml/scenario2.yaml"
+#        - "e2e/updatecli.d/success.d/yaml/scenario3.yaml"
       key: "name"
 
   testFile:
@@ -22,19 +23,20 @@ conditions:
   testFiles:
     name: Test three yaml file
     kind: yaml
-    sourceid: testFiles
+    disablesourceinput: true
     spec:
       files:
         - "e2e/updatecli.d/success.d/yaml/scenario1.yaml"
-        - "e2e/updatecli.d/success.d/yaml/scenario2.yaml"
-        - "e2e/updatecli.d/success.d/yaml/scenario3.yaml"
+# Multiple files is not supported for conditions
+#        - "e2e/updatecli.d/success.d/yaml/scenario2.yaml"
+#        - "e2e/updatecli.d/success.d/yaml/scenario3.yaml"
       key: "name"
       value: "Test yaml resource"
 
   testFile:
     name: Test yaml file
     kind: yaml
-    sourceid: testFile
+    disablesourceinput: true
     spec:
       file: "e2e/updatecli.d/success.d/yaml/scenario1.yaml"
       key: "name"
